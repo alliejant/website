@@ -1,0 +1,171 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* style for app */
+.App {
+  height: 100vh;
+  width: 100vw;
+  font-family: Monaco, Consolas, Monospace;
+  font-size: 14px;
+  background-color: rgb(18, 18, 68);
+  background-image:  url('./images/milky-way.jpg');
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 5fr 1fr 15fr;
+  grid-template-areas: 
+    "profile-picture . nav"
+    "name name name"
+    "main main main";
+  justify-items: center;
+  align-items: center;
+  > .circle {
+      height: calc(100% - 10px);
+      margin: 5px;
+      grid-area: profile-picture;
+      justify-self: end;
+  }
+}
+
+header {
+  color: white;
+  grid-area: name;
+  font-size: 14px;
+  font-size: calc(14px + 2vw);
+  justify-self: center;
+  align-self: end;
+  text-align: center;
+  > * {
+    padding: 5px;
+  }
+  h1, span {
+    display: inline-block;
+    z-index: 1;
+  }
+  i {
+    padding: 1vw;
+  }
+}
+
+nav {
+  grid-area: nav;
+  i {
+    color: white;
+    font-size: 30px;
+  }
+  span {
+    display: none;
+  }
+}
+
+main {
+  grid-area: main;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 30px;
+  width: calc(100% - 60px);
+  height: calc(100% - 60px);
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 480px) {
+  .App {
+  grid-template-areas: 
+    "profile-picture name name"
+    "nav main main"
+    "nav main main";
+  }
+  nav {
+    margin-top: 30px;
+    color: black;
+    justify-self: start;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: stretch;
+    i.fas.fa-bars {
+      display: none;
+    }
+    span {
+      display: inline-block;
+      padding: 10px 50px;
+      background-color: white;
+      border: 1px solid black;
+    }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .App {
+  grid-template-areas: 
+    "profile-picture name name"
+    "profile-picture nav nav"
+    "main main main";
+  }
+  nav {
+    margin-top: 0;
+    color: black;
+    justify-self: center;
+    align-self: start;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    i.fas.fa-bars {
+      display: none;
+    }
+    span {
+      display: inline-block;
+      padding: 10px 30px;
+      background-color: white;
+      transform: skewX(-10deg);
+      border: 1px solid black;
+    }
+  }
+}
+
+
+
