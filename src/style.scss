@@ -78,7 +78,7 @@ header {
   > * {
     padding: 2px;
   }
-  h1, span {
+  h1, ul {
     display: inline-block;
   }
   i {
@@ -94,7 +94,7 @@ nav {
     color: white;
     font-size: 30px;
   }
-  span {
+  li {
     display: none;
   }
 }
@@ -135,7 +135,7 @@ main {
     i.fas.fa-bars {
       display: none;
     }
-    span {
+    li {
       display: inline-block;
       padding: 10px 30px;
       background-color: white;
@@ -163,7 +163,7 @@ main {
     justify-self: center;
     flex-direction: row;
     align-items: start;
-    span {
+    li {
       padding: 10px 3.5vw;
       transform: skewX(-10deg);
     }
