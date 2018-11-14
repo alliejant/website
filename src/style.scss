@@ -1,4 +1,4 @@
-/* reset */
+/* Reset */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,7 +15,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: 14px;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -42,13 +42,43 @@ table {
 	border-spacing: 0;
 }
 
-/* style for app */
-.App {
+/* Normalize */
+ button,
+ input,
+ optgroup,
+ select,
+ textarea {
+   font-family: inherit; 
+   font-size: 14px; 
+   line-height: 1.15; 
+   margin: 0; 
+ }
+ 
+ button,
+ input { 
+   overflow: visible;
+ }
+
+ button,
+ select { 
+   text-transform: none;
+ }
+ 
+ button,
+ [type="button"],
+ [type="reset"],
+ [type="submit"] {
+   -webkit-appearance: button;
+ }
+
+
+/* Style for app */
+.app {
   height: 100vh;
   width: 100vw;
+  overflow: auto;
   padding: 10px;
   font-family: Monaco, Consolas, Monospace;
-  font-size: 14px;
   background-color: rgb(18, 18, 68);
   background-image:  url('./images/milky-way.jpg');
   background-size: cover;
@@ -67,6 +97,22 @@ table {
     height: calc(30px + 70%);
   }
 }
+
+button, a {
+    outline: none;
+  :focus, :hover, :active {
+    border: none;
+    background: none;
+  } 
+}
+
+a:link, a:visited {
+  color: rgb(45, 4, 139);
+} 
+a:active, a:hover {
+  color: orangered;
+}
+
 
 header {
   grid-area: name;
@@ -88,14 +134,42 @@ header {
 }
 
 nav {
+  position: relative;
   grid-area: nav;
   align-self: start;
+  justify-self: end;
+  button {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    padding: 0px;
+  }
   i {
     color: white;
     font-size: 30px;
   }
+  span.links-modal {
+    position: absolute;
+    left: -25vw;
+    display: flex;
+    flex-direction: column;
+    li {
+      width: 60px;
+    }
+  }
   li {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: white;
+    border: 1px solid black;
+    a {
+      text-decoration: none; 
+    }
+  }
+  > li {
     display: none;
+    a {
+      text-decoration: none; 
+    }
   }
 }
 
@@ -105,6 +179,7 @@ main {
   margin: 30px;
   width: calc(100% - 60px);
   height: calc(100% - 60px);
+  display: flex;
 }
 
 .circle {
@@ -112,7 +187,7 @@ main {
 }
 
 @media screen and (min-width: 480px) {
-  .App {
+  .app {
   grid-template-areas: 
     "profile-picture name name"
     "nav main main"
@@ -135,11 +210,11 @@ main {
     i.fas.fa-bars {
       display: none;
     }
-    li {
+    span.links-modal {
+      display: none;
+    }
+    > li {
       display: inline-block;
-      padding: 10px 30px;
-      background-color: white;
-      border: 1px solid black;
     }
   }
   main {
@@ -149,7 +224,7 @@ main {
 }
 
 @media screen and (min-width: 760px) {
-  .App {
+  .app {
   grid-template-areas: 
     "profile-picture name name"
     "profile-picture nav nav"
