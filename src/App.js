@@ -41,7 +41,9 @@ class App extends Component {
           <button onClick={this.toggleShowLinksModal}>
             <i className="fas fa-bars" />
           </button>
-          {this.state.showLinksModal ? <LinksModal /> : null}
+          {this.state.showLinksModal ? (
+            <LinksModal toggleShowLinksModal={this.toggleShowLinksModal} />
+          ) : null}
           <li>
             <Link to="/contact">Contact</Link>
           </li>
