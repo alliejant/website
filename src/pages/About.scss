@@ -1,0 +1,30 @@
+
+.About {
+    height: 90%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: left;
+    p {
+        padding: 10px;
+    }
+    img {
+        height: 25px;
+    }
+    overflow: auto;
+}
+
+.About p:nth-of-type(1), .About p:nth-of-type(2){
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.About p:nth-of-type(1) {
+    color: rgb(131, 21, 21);
+    align-self: flex-start;
+}
+
+.About p:nth-of-type(2) {
+    color: rgb(36, 26, 184);
+    align-self: flex-start;
+}
