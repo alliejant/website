@@ -94,8 +94,10 @@ table {
   > .circle {
     grid-area: profile-picture;
     height: 50px;
-    height: calc(30px + 70%);
+    height: calc(20px + 15vmax);
+    margin: 10px;
   }
+  line-height: 1.4;
 }
 
 button, a {
@@ -118,9 +120,9 @@ header {
   grid-area: name;
   color: white;
   font-size: calc(14px + 2vw);
-  align-self: end;
+  align-self: flex-end;
   text-align: center;
-  margin: 0px 10px;
+  margin: 10px;
   > * {
     padding: 2px;
   }
@@ -136,8 +138,9 @@ header {
 nav {
   position: relative;
   grid-area: nav;
-  align-self: start;
-  justify-self: end;
+  align-self: flex-start;
+  justify-self: flex-end;
+  width: 60px;
   button {
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -149,7 +152,7 @@ nav {
   }
   span.links-modal {
     position: absolute;
-    left: -25vw;
+    left: -100px;
     display: flex;
     flex-direction: column;
     li {
@@ -175,8 +178,9 @@ nav {
 
 main {
   grid-area: main;
-  background-color: rgba(255, 255, 255, 0.5);
-  margin: 30px;
+  align-self: flex-start;
+  background-color: rgba(255, 255, 255, 0.65);
+  margin-top: 0px;
   width: calc(100% - 60px);
   height: calc(100% - 60px);
   display: flex;
@@ -197,10 +201,11 @@ main {
     }
   }
   header {
-    margin: 0px 30px;
+    margin: 0px 30px 20px;
   }
   nav {
-    margin-top: 30px;
+    width: 100%;
+    margin-top: 10px;
     padding: 0px;
     color: black;
     justify-self: stretch;
@@ -230,8 +235,11 @@ main {
     "profile-picture nav nav"
     "main main main";
     > .circle {
-      justify-self: end;
+      justify-self: flex-end;
     }
+  }
+  header {
+    margin-bottom: 0px;
   }
   nav {
     margin-top: 0;

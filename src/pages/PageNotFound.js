@@ -9,8 +9,7 @@ class PageNotFound extends Component {
         <img src={require("../images/shrug.png")} alt="shrug" />
         <p> Sorry I can't find the page you're looking for! </p>
         <p>
-          Feel free to <Link to="/contact"> contact me</Link>
-          {". "}
+          Feel free to <Link to="/contact"> contact me</Link>.
         </p>
       </div>
     );
