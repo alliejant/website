@@ -26,7 +26,7 @@ class About extends Component {
           and to the point: I am a full stack software engineer. I have been
           programming since 2015 when I took a career test and programming came
           up as one of my matched careers. I started learning javascript through{" "}
-          <a href="www.codecademy.com" target="blank">
+          <a href="https://www.codecademy.com" target="blank">
             codecademy
           </a>{" "}
           and gradually moved to more complex topics such as React, GraphQL with
