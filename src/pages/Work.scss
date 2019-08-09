@@ -1,0 +1,18 @@
+.Work {
+    height: 90%;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    p {
+        padding: 10px;
+    }
+    ul {
+        list-style-type: circle;
+        margin-left: 50px;
+    }
+    strong {
+        letter-spacing:1px;
+        font-weight: 900;
+    }
+    overflow: auto;
+}
