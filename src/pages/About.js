@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./About.scss";
 
 class About extends Component {
@@ -22,12 +23,12 @@ class About extends Component {
             src={require("../images/facepalm.png")}
             alt="facepalm"
             title="facepalm"
-          />{" "}
-          and to the point: I am a full stack software engineer. I have been
-          programming since 2015 when I took a career test and programming came
-          up as one of my matched careers. I started learning javascript through{" "}
+          />
+          {". "}I am a full stack software engineer. I have been programming
+          since 2015 when I took a career test and programming came up as one of
+          my matched careers. I started learning javascript through{" "}
           <a href="https://www.codecademy.com" target="blank">
-            codecademy
+            Codecademy
           </a>{" "}
           and gradually moved to more complex topics such as React, GraphQL with
           Relay, and other languages like Go. I’ve worked in front-end,
@@ -35,16 +36,17 @@ class About extends Component {
           them. Coding in general excites me and how much there is to learn!
         </p>
         <p>
-          Outside of engineering, I love listening and dancing to salsa, cumbia,
-          and electronic music. I met my husband while salsa dancing and got
-          married to him recently on the edge of Yosemite. I also love traveling
-          and lived in Ecuador for almost a year while working at a non-profit.{" "}
+          Outside of engineering, I like hiking, dancing to salsa/cumbia, and
+          listening to electronic music. I met my husband while salsa dancing
+          and got married to him on the edge of Yosemite and we have a cute
+          golden retriever together. I also enjoy traveling and lived in Ecuador
+          for almost a year while working at a non-profit.{" "}
         </p>
         <p>
           I’d love to connect with others who are building a mobile application
-          or want to talk code together! I will be travelling abroad soon, so if
-          you are a recruiter who is looking for remote (ideally part-time)
-          employee, please reach out too!
+          or want to talk code together! I am currently looking for a new
+          position, so please take a look at what <Link to="/work"> work</Link>{" "}
+          I am looking for.
         </p>
       </div>
     );

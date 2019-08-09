@@ -5,19 +5,19 @@ class Skills extends Component {
   constructor(props) {
     super(props);
 
-    this.mostRecent = [
-      "Javascript",
+    this.mostRecent = ["HTML", "CSS", "Javascript", "React", "React Native"];
+    this.somewhatRecent = [
       "Go",
-      "React",
+      "Ruby on Rails",
+      "Node.js",
+      "Express",
+      "Postgres",
       "GraphQL",
       "Relay",
       "Flow",
-      "Postgres",
-      "HTML",
-      "CSS"
+      "Redux"
     ];
-    this.somewhatRecent = ["React Native", "Redux", "Node.js", "Express"];
-    this.leastRecent = ["Ruby on Rails", "Python", "Flask", "Mongo"];
+    this.leastRecent = ["Python", "Flask", "Mongo"];
 
     this.state = {
       // options include: Text - No Game, Most Recent, Somewhat Recent, Least Recent
@@ -31,7 +31,7 @@ class Skills extends Component {
   }
 
   componentDidMount() {
-    this.createSkills("Most Recent");
+    this.createSkills("All");
   }
 
   createSkills = option => {
@@ -164,7 +164,13 @@ class Skills extends Component {
     return (
       <button
         onClick={() => this.createSkills(option)}
-        className={selected ? "selected" : null}
+        className={
+          selected
+            ? "selected"
+            : option === "Text - No Game"
+            ? "text-no-game"
+            : null
+        }
       >
         {option}
       </button>

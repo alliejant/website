@@ -11,6 +11,11 @@
     color: white;
 }
 
+.text-no-game {
+    font-weight: 900;
+    background-color: rgba(222, 220, 220,.5);
+}
+
 .game {
     display: flex;
     flex-direction: column;
