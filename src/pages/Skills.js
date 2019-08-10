@@ -8,7 +8,8 @@ class Skills extends Component {
     this.mostRecent = ["HTML", "CSS", "Javascript", "React", "React Native"];
     this.somewhatRecent = [
       "Go",
-      "Ruby on Rails",
+      "Ruby",
+      "Rails",
       "Node.js",
       "Express",
       "Postgres",
@@ -54,7 +55,7 @@ class Skills extends Component {
     }
 
     // Check to make sure skills is of valid length and if so, even out grid to a X by X size
-    if (skills === undefined || skills.length < 4) {
+    if (skills === undefined || skills.length < 2) {
       this.setState({
         gameOption: "Text - No Game",
         skills: [],
