@@ -5,20 +5,20 @@ class Skills extends Component {
   constructor(props) {
     super(props);
 
-    this.mostRecent = ["HTML", "CSS", "Javascript", "React", "React Native"];
+    this.mostRecent = ["HTML5", "CSS3", "Javascript", "React", "React Native"];
     this.somewhatRecent = [
       "Go",
       "Ruby",
       "Rails",
-      "Node.js",
+      "NodeJS",
       "Express",
-      "Postgres",
+      "PostgresQL",
       "GraphQL",
       "Relay",
       "Flow",
       "Redux"
     ];
-    this.leastRecent = ["Python", "Flask", "Mongo"];
+    this.leastRecent = ["Python", "Flask", "MongoDB"];
 
     this.state = {
       // options include: Text - No Game, Most Recent, Somewhat Recent, Least Recent
@@ -110,6 +110,7 @@ class Skills extends Component {
     for (let rowStart = 0; rowStart < skills.length; rowStart += gridSize) {
       const row = [];
       for (let i = rowStart; i < rowStart + gridSize; i++) {
+        const lowerCaseSkill = skills[i].split(" ")[0].toLowerCase();
         row.push(
           indiciesToUncover.has(i) ? (
             <div
@@ -118,7 +119,18 @@ class Skills extends Component {
               onClick={() => this.selectCard(i)}
             />
           ) : (
-            <div key={i}> {skills[i]}</div>
+            <div key={i}>
+              {skills[i]}
+              <i
+                class={`devicon-${lowerCaseSkill}-plain devicon-${lowerCaseSkill}-original
+                devicon-devicon-plain`}
+                style={{
+                  fontSize: "3em",
+                  display: "block",
+                  color: "orangered"
+                }}
+              />
+            </div>
           )
         );
       }
