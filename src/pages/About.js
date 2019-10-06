@@ -9,7 +9,7 @@ class About extends Component {
         <p> How many people do you think would choose D? </p>
         <img
           src={require("../images/javascript-joke.jpg")}
-          alt="javascript is the most popular language"
+          alt="What is the world's most popular language? A: French, B: English, C: Spanish, D: Javascript"
         />
         <p>
           I'd be tempted, but okay, enough with the joking{" "}
