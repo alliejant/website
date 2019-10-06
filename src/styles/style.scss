@@ -72,32 +72,34 @@ table {
  }
 
 
+
 /* Style for app */
 .app {
   height: 100vh;
   width: 100vw;
-  overflow: auto;
-  padding: 10px;
   font-family: Monaco, Consolas, Monospace;
   background-color: rgb(18, 18, 68);
   background-image:  url('../images/milky-way.jpg');
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 5fr 1fr 15fr;
+  grid-template-rows: 5fr 2fr 23fr;
   grid-template-areas: 
     "profile-picture . nav"
     "name name name"
     "main main main";
   justify-items: center;
   align-items: center;
-  > .circle {
-    grid-area: profile-picture;
-    height: 50px;
-    height: calc(20px + 15vmax);
-    margin: 10px;
-  }
   line-height: 1.4;
+  > .circle {
+      grid-area: profile-picture;
+      overflow: scroll;
+      height: 100px;
+      height: 95%;
+      min-height: 100px;
+      margin: 10px;
+      display: none;
+  }
 }
 
 button, a {
@@ -118,8 +120,9 @@ a:active, a:hover {
 
 header {
   grid-area: name;
+  overflow: scroll;
   color: white;
-  font-size: calc(14px + 2vw);
+  font-size: calc(14px + 2vmin + 1vmax);
   align-self: flex-end;
   text-align: center;
   margin: 10px;
@@ -131,17 +134,23 @@ header {
   }
   i {
     padding: 5px;
-    padding: 1vw;
+    padding: 0.8vw;
     color: white;
+  }
+  i:active, i:hover {
+    opacity: 0.75;
   }
 }
 
 nav {
+  margin-top: 15px;
   position: relative;
   grid-area: nav;
   align-self: flex-start;
   justify-self: flex-end;
   width: 60px;
+  z-index: 1;
+  
   button {
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -179,10 +188,11 @@ nav {
 
 main {
   grid-area: main;
+  overflow: scroll;
   align-self: flex-start;
   background-color: rgba(255, 255, 255, 0.65);
-  width: calc(100% - 60px);
-  height: calc(100% - 60px);
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
   display: flex;
     div {
       height: inherit;
@@ -195,22 +205,20 @@ main {
   border-radius: 50%;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px){
   .app {
   grid-template-areas: 
     "profile-picture name name"
     "nav main main"
     "nav main main";
     > .circle {
-      margin-top: 30px;
+      display: inline-block
     }
   }
-  header {
-    margin: 0px 30px 20px;
-  }
   nav {
+    margin: 5px;
+    overflow: scroll;
     width: 100%;
-    margin-top: 10px;
     padding: 0px;
     color: black;
     justify-self: stretch;
@@ -228,8 +236,7 @@ main {
     }
   }
   main {
-    margin: 10px;
-    margin-left: 0px;
+    margin-top: 5px;
   }
 }
 
@@ -244,19 +251,21 @@ main {
     }
   }
   header {
+    justify-self: flex-start;
     margin-bottom: 0px;
   }
   nav {
     margin-top: 0;
     flex-direction: row;
-    align-items: start;
+    justify-self: flex-start;
     li {
       padding: 10px 3.5vw;
       transform: skewX(-10deg);
     }
   }
   main {
-    margin: 30px;
+    margin: 10px 30px;
+    width: calc(100% - 75px);
   }
 }
 

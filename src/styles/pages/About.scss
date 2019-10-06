@@ -6,11 +6,11 @@
     align-items: center;
     text-align: left;
     overflow: auto;
+    p {
+        margin: 10px;
+    }
 }
 
-p {
-    padding: 10px;
-}
 
 .About p:nth-of-type(1) {
     font-size: 18px;
@@ -21,7 +21,10 @@ p {
 
 img[src*="javascript-joke"]{
     display: block;
-    width: 80%;
+    max-width: 80%;
+    margin: 10px;
+    margin-left: 20px;
+    align-self: flex-start
 }
 
 img[src*="facepalm"]{
