@@ -8,7 +8,7 @@ import Skills from "./pages/Skills";
 import Work from "./pages/Work";
 import Resume from "./pages/Resume";
 import PageNotFound from "./pages/PageNotFound";
-import "./style.scss";
+import "./styles/style.scss";
 
 class App extends Component {
   constructor(props) {

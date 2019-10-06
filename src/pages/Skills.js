@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Icon } from "@iconify/react";
 import icons from "../components/Icons";
-import "./Skills.scss";
+import "../styles/pages/Skills.scss";
 
 class Skills extends Component {
   constructor(props) {

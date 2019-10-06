@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Work.scss";
+import "../styles/pages/Work.scss";
 
 class Work extends Component {
   render() {
