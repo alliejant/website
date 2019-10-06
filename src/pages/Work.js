@@ -9,7 +9,7 @@ class Work extends Component {
         <p> I am looking for work that is:</p>
         <ul>
           <li>
-            <strong>Part-time</strong> (20-30 hrs/wk)
+            <strong>Part-time or Full-time</strong>
           </li>
           <li>
             <strong>Remote</strong> (can travel for team meetings when required)
@@ -23,11 +23,10 @@ class Work extends Component {
         </p>
         <p>
           In my previous positions, I have shown that I work well independently
-          but can communicate well in a group. I am most well versed in
-          Javascript and have done several projects with React and React Native
-          - like this website! I am committed to doing what I can in order to
-          present my best work. Please <Link to="/contact"> contact me</Link> if
-          you think I would be a good fit for your team.
+          and with the team. I am committed to doing what I need to to move your
+          product forward. I've also done several projects with React - like
+          this website! Please <Link to="/contact"> contact me</Link> if you
+          think I would be a good fit for your team.
         </p>
       </div>
     );
