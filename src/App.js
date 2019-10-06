@@ -30,7 +30,7 @@ class App extends Component {
           className="circle"
         />
         <header>
-          <h1>Alexandra Antkowiak</h1>
+          <h1>Alexandra Garcia</h1>
           <ul>
             <i className="fab fa-github" />
             <i className="fab fa-linkedin" />
