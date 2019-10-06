@@ -5,7 +5,7 @@ import "../styles/pages/PageNotFound.scss";
 class PageNotFound extends Component {
   render() {
     return (
-      <div>
+      <div className="PageNotFound">
         <img src={require("../images/shrug.png")} alt="shrug" />
         <p> Sorry I can't find the page you're looking for! </p>
         <p>

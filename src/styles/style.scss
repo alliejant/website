@@ -98,6 +98,10 @@ table {
   }
 }
 
+.circle {
+  border-radius: 50%;
+}
+
 button, a {
     outline: none;
   :focus, :hover, :active {
@@ -112,7 +116,6 @@ a:link, a:visited {
 a:active, a:hover {
   color: orangered;
 }
-
 
 header {
   grid-area: name;
@@ -152,10 +155,12 @@ nav {
     border: none;
     padding: 0px;
   }
+
   i {
     color: white;
     font-size: 30px;
   }
+
   span.links-modal {
     position: absolute;
     left: -100px;
@@ -188,17 +193,18 @@ main {
   align-self: flex-start;
   background-color: rgba(255, 255, 255, 0.65);
   width: calc(100% - 40px);
-  height: calc(100% - 40px);
+  height: calc(100% - 20px);
   display: flex;
     div {
-      height: inherit;
-      width: inherit;
+      height: 100%;
+      width: 100%;
+      margin: 5vmin;
+      margin-top: 2vmin;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-}
-
-
-.circle {
-  border-radius: 50%;
 }
 
 @media screen and (min-width: 480px){
@@ -215,8 +221,10 @@ main {
       margin-top: 10px;
     }
   }
-  nav {
+  header, nav {
     margin: 5px;
+  }
+  nav {
     overflow: scroll;
     width: 100%;
     padding: 0px;
@@ -265,7 +273,7 @@ main {
   }
   main {
     margin: 10px 30px;
-    width: calc(100% - 75px);
+    width: calc(100% - 11vw);
   }
 }
 

@@ -9,14 +9,12 @@
     p {
         margin: 10px;
     }
-}
-
-
-.About p:nth-of-type(1) {
-    font-size: 18px;
-    font-weight: bold;
-    color: rgb(131, 21, 21);
-    align-self: flex-start;
+    p:nth-of-type(1) {
+        font-size: 18px;
+        font-weight: bold;
+        color: rgb(131, 21, 21);
+        align-self: flex-start;
+    }
 }
 
 img[src*="javascript-joke"]{
@@ -24,7 +22,7 @@ img[src*="javascript-joke"]{
     max-width: 80%;
     margin: 10px;
     margin-left: 20px;
-    align-self: flex-start
+    align-self: flex-start;
 }
 
 img[src*="facepalm"]{

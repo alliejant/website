@@ -1,7 +1,3 @@
-.Skills {
-    overflow: auto;
-}
-
 .Skills div {
     align-items: start;
     text-align: left;
@@ -35,14 +31,14 @@
         margin: 2px;
         text-align: center;
     }
-}
-@media screen and (min-width: 760px) {
-.game {
-    div {
-        width: 12vmin;
+    div.covered{
+        background-color: gray;
     }
 }
-}    
-.game div.covered{
-    background-color: gray;
+@media screen and (min-width: 760px) {
+    .game {
+        div {
+            width: 11vmin;
+        }
+    }
 }

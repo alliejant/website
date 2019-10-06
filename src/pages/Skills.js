@@ -135,7 +135,7 @@ class Skills extends Component {
                 style={{
                   fontSize: "2.5em",
                   display: "block",
-                  margin: ".25em auto",
+                  margin: ".2em auto",
                   maxWidth: "2em"
                 }}
               />
