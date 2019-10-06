@@ -9,22 +9,20 @@ class Work extends Component {
         <p> I am looking for work that is:</p>
         <ul>
           <li>
-            <strong>Part-time or Full-time</strong>
+            <strong>Part-time</strong> or <strong>Full-time</strong>
           </li>
           <li>
             <strong>Remote</strong> (can travel for team meetings when required)
           </li>
         </ul>
         <p>
-          Both large companies and start-ups interest me and I and can do
-          front-end, back-end, and full-stack work for both web and mobile. I
-          love learning and would be happy to learn new languages and frameworks
-          on the job.
+          Both large companies and start-ups interest me and I can do front-end,
+          back-end, and full-stack work for both web and mobile. I love learning
+          and would be happy to learn new languages and frameworks on the job.
         </p>
         <p>
           In my previous positions, I have shown that I work well independently
-          and with the team. I am committed to doing what I need to to move your
-          product forward. I've also done several projects with React - like
+          and with the team. I've also done several projects with React - like
           this website! Please <Link to="/contact"> contact me</Link> if you
           think I would be a good fit for your team.
         </p>

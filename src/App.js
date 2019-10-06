@@ -31,7 +31,7 @@ class App extends Component {
           className="circle"
         />
         <header>
-          <h1>Alexandra Garcia</h1>
+          <h1>Alexandra Garcia </h1>
           <ul>
             <WebsiteLink
               link="https://www.github.com/alliejant"

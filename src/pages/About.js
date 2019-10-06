@@ -25,16 +25,16 @@ class About extends Component {
             Codecademy
           </a>{" "}
           and gradually moved to more complex topics such as React, GraphQL with
-          Relay, and other languages like Go. I’ve worked in front-end,
-          back-end, web and mobile engineering roles and enjoy doing whatever
-          I'm needed for. Coding in general excites me and how much there is to
-          learn!
+          Relay, and other languages like Go, Ruby, and Python. I’ve worked in
+          front-end, back-end, and full-stack roles and enjoy both web and
+          mobile engineering. Coding in general excites me and how much there is
+          to learn!
         </p>
         <p>
           Outside of engineering, I like hiking, listening to electronic music,
           and dancing to salsa/cumbia (how I met my husband). Since my last
-          position at a startup, we took some time to travel the world before
-          settling back in to the lovely San Francisco Bay Area.
+          position, I took some time to travel the world before settling back in
+          to the lovely San Francisco Bay Area.
         </p>
         <p>
           I’d love to connect with others who are building a mobile application
