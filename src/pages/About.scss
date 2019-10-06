@@ -5,26 +5,27 @@
     justify-items: center;
     align-items: center;
     text-align: left;
-    p {
-        padding: 10px;
-    }
-    img {
-        height: 25px;
-    }
     overflow: auto;
 }
 
-.About p:nth-of-type(1), .About p:nth-of-type(2){
-    font-size: 18px;
-    font-weight: bold;
+p {
+    padding: 10px;
 }
 
 .About p:nth-of-type(1) {
+    font-size: 18px;
+    font-weight: bold;
     color: rgb(131, 21, 21);
     align-self: flex-start;
 }
 
-.About p:nth-of-type(2) {
-    color: rgb(36, 26, 184);
-    align-self: flex-start;
+img[src*="javascript-joke"]{
+    display: block;
+    width: 80%;
 }
+
+img[src*="facepalm"]{
+    height: 25px;
+}
+
+

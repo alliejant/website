@@ -6,19 +6,13 @@ class About extends Component {
   render() {
     return (
       <div className="About">
-        <p> You want to hear a JavaScript joke?</p>
+        <p> How many people do you think would choose D? </p>
+        <img
+          src={require("../images/javascript-joke.jpg")}
+          alt="javascript is the most popular language"
+        />
         <p>
-          I'll{" "}
-          <a
-            href="https://javascriptissexy.com/understand-javascript-callback-functions-and-use-them"
-            target="blank"
-          >
-            callback
-          </a>{" "}
-          later.
-        </p>
-        <p>
-          Okay, enough with the joking{" "}
+          I'd be tempted, but okay, enough with the joking{" "}
           <img
             src={require("../images/facepalm.png")}
             alt="facepalm"
@@ -32,15 +26,15 @@ class About extends Component {
           </a>{" "}
           and gradually moved to more complex topics such as React, GraphQL with
           Relay, and other languages like Go. I’ve worked in front-end,
-          back-end, full stack and mobile engineering roles and love all of
-          them. Coding in general excites me and how much there is to learn!
+          back-end, web and mobile engineering roles and enjoy doing whatever
+          I'm needed for. Coding in general excites me and how much there is to
+          learn!
         </p>
         <p>
-          Outside of engineering, I like hiking, dancing to salsa/cumbia, and
-          listening to electronic music. I met my husband while salsa dancing
-          and got married to him on the edge of Yosemite and we have a cute
-          golden retriever together. I also enjoy traveling and lived in Ecuador
-          for almost a year while working at a non-profit.{" "}
+          Outside of engineering, I like hiking, listening to electronic music,
+          and dancing to salsa/cumbia (how I met my husband). Since my last
+          position at a startup, we took some time to travel the world before
+          settling back in to the lovely San Francisco Bay Area.
         </p>
         <p>
           I’d love to connect with others who are building a mobile application
