@@ -1,22 +1,31 @@
 import React, { Component } from "react";
+import { Icon } from "@iconify/react";
+import icons from "../components/Icons";
 import "./Skills.scss";
 
 class Skills extends Component {
   constructor(props) {
     super(props);
 
-    this.mostRecent = ["HTML5", "CSS3", "Javascript", "React", "React Native"];
-    this.somewhatRecent = [
-      "Go",
+    this.mostRecent = [
+      "HTML5",
+      "CSS3",
+      "Sass",
+      "Javascript",
+      "React",
+      "React Native",
       "Ruby",
       "Rails",
-      "NodeJS",
-      "Express",
-      "PostgresQL",
+      "PostgreSQL"
+    ];
+    this.somewhatRecent = [
       "GraphQL",
       "Relay",
       "Flow",
-      "Redux"
+      "Redux",
+      "Go",
+      "NodeJS",
+      "Express"
     ];
     this.leastRecent = ["Python", "Flask", "MongoDB"];
 
@@ -110,7 +119,7 @@ class Skills extends Component {
     for (let rowStart = 0; rowStart < skills.length; rowStart += gridSize) {
       const row = [];
       for (let i = rowStart; i < rowStart + gridSize; i++) {
-        const lowerCaseSkill = skills[i].split(" ")[0].toLowerCase();
+        const lowerCaseSkill = skills[i].replace(/\s/g, "").toLowerCase();
         row.push(
           indiciesToUncover.has(i) ? (
             <div
@@ -121,13 +130,13 @@ class Skills extends Component {
           ) : (
             <div key={i}>
               {skills[i]}
-              <i
-                class={`devicon-${lowerCaseSkill}-plain devicon-${lowerCaseSkill}-original
-                devicon-devicon-plain`}
+              <Icon
+                icon={icons[lowerCaseSkill]}
                 style={{
-                  fontSize: "3em",
+                  fontSize: "2.5em",
                   display: "block",
-                  color: "orangered"
+                  margin: ".25em auto",
+                  maxWidth: "2em"
                 }}
               />
             </div>
