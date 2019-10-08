@@ -23,7 +23,7 @@ class Contact extends Component {
         message = `Hi Allie,\n\nI have a job you might be interested in! We are working on _____.\n\nBest,\n`;
         break;
       case "study":
-        message = `Hi Allie,\n\nI'm studying _____ and would love to meet up to study/build apps together. What I'm thinking is we can ______. Let me know if you are interested!\n\nBest,\n`;
+        message = `Hi Allie,\n\nI'm studying _____ and would love to meet up to study/build apps together. What I'm thinking is we can _____. Let me know if you are interested!\n\nBest,\n`;
         break;
       default:
     }
