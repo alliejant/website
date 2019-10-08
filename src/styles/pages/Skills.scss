@@ -1,9 +1,15 @@
-.Skills div {
-    align-items: start;
-    text-align: left;
-    p {
-        margin-bottom: 10px;
+.Skills {
+    div {
+        align-items: start;
+        text-align: left;
+        p {
+            margin-bottom: 10px;
+        }
+    }   
+    > section {
+        margin: 1vmin;
     }
+
 }
 
 .selected {

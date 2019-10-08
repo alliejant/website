@@ -71,7 +71,9 @@ table {
    -webkit-appearance: button;
  }
 
-
+ *:focus {
+  outline: none;
+}
 
 /* Style for app */
 .app {
@@ -79,7 +81,7 @@ table {
   width: 100vw;
   font-family: Monaco, Consolas, Monospace;
   background-color: rgb(18, 18, 68);
-  background-image:  url('../images/milky-way.jpg');
+  background-image:  url('../media/milky-way.jpg');
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 2fr 2fr;
@@ -170,20 +172,35 @@ nav {
       width: 60px;
     }
   }
+  
   li {
     display: inline-block;
+    opacity: 100%;
     padding: 10px 30px;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 100);
     border: 1px solid black;
+    animation: dropdown 250ms cubic-bezier(0.000, 0.800, 0.830, 0.945);
     a {
       text-decoration: none; 
     }
   }
+
   > li {
     display: none;
     a {
       text-decoration: none; 
     }
+  }
+}
+
+@keyframes dropdown {
+  0% {
+      transform: translate(1px,-3px); 
+      background-color: rgba(255, 255, 255, .5);
+  }
+
+  100% {
+      transform: translate(0px, 0px);
   }
 }
 
@@ -195,7 +212,7 @@ main {
   width: calc(100% - 40px);
   height: calc(100% - 20px);
   display: flex;
-    div {
+    > div {
       height: 100%;
       width: 100%;
       margin: 5vmin;
@@ -225,6 +242,7 @@ main {
     margin: 5px;
   }
   nav {
+    /* overflow scroll cannot be placed in screen < 480px or nav will not show correctly when drop-down is clicked */
     overflow: scroll;
     width: 100%;
     padding: 0px;
@@ -240,6 +258,7 @@ main {
       display: none;
     }
     > li {
+      padding: 1.25vh 3.5vw;
       display: inline-block;
     }
   }
@@ -266,8 +285,7 @@ main {
     margin-top: 0;
     flex-direction: row;
     justify-self: flex-start;
-    li {
-      padding: 10px 3.5vw;
+    > li {
       transform: skewX(-10deg);
     }
   }
