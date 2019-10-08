@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Link, Switch, Redirect } from "react-router-dom";
-import WebsiteLink from "./components/WebsiteLink";
+import IconLink from "./components/IconLink";
 import LinksModal from "./components/LinksModal";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -33,15 +33,15 @@ class App extends Component {
         <header>
           <h1>Alexandra Garcia </h1>
           <ul>
-            <WebsiteLink
+            <IconLink
               link="https://www.github.com/alliejant"
               icon="fab fa-github"
             />
-            <WebsiteLink
+            <IconLink
               link="https://www.linkedin.com/in/alliejant/"
               icon="fab fa-linkedin"
             />
-            <WebsiteLink
+            <IconLink
               link="https://www.angel.co/alliejant"
               icon="fab fa-angellist"
             />

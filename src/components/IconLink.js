@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class WebsiteLink extends Component {
+class IconLink extends Component {
   render() {
     let icon = this.props.icon ? <i className={this.props.icon} /> : "";
     let text = this.props.text ? this.props.text : "";
@@ -13,4 +13,4 @@ class WebsiteLink extends Component {
   }
 }
 
-export default WebsiteLink;
+export default IconLink;
