@@ -1,34 +1,34 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class LinksModal extends Component {
   render() {
     return (
       <span className="links-modal">
         <li>
-          <Link to="/contact" onClick={this.props.toggleShowLinksModal}>
+          <NavLink to="/contact" onClick={this.props.toggleShowLinksModal}>
             Contact
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/about" onClick={this.props.toggleShowLinksModal}>
+          <NavLink to="/about" onClick={this.props.toggleShowLinksModal}>
             About
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/skills" onClick={this.props.toggleShowLinksModal}>
+          <NavLink to="/skills" onClick={this.props.toggleShowLinksModal}>
             Skills
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/work" onClick={this.props.toggleShowLinksModal}>
+          <NavLink to="/work" onClick={this.props.toggleShowLinksModal}>
             Work
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/resume" onClick={this.props.toggleShowLinksModal}>
+          <NavLink to="/resume" onClick={this.props.toggleShowLinksModal}>
             Resume
-          </Link>
+          </NavLink>
         </li>
       </span>
     );

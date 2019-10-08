@@ -113,7 +113,7 @@ button, a {
 a:link, a:visited {
   color: rgb(45, 4, 139);
 } 
-a:active, a:hover {
+a.active, a:active, a:hover {
   color: orangered;
 }
 

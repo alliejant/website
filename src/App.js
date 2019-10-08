@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link, Switch, Redirect } from "react-router-dom";
+import { Route, NavLink, Switch, Redirect } from "react-router-dom";
 import IconLink from "./components/IconLink";
 import LinksModal from "./components/LinksModal";
 import Contact from "./pages/Contact";
@@ -55,19 +55,29 @@ class App extends Component {
             <LinksModal toggleShowLinksModal={this.toggleShowLinksModal} />
           ) : null}
           <li>
-            <Link to="/contact">Contact</Link>
+            <NavLink to="/contact" activeClassName="active">
+              Contact
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink to="/about" activeClassName="active">
+              About
+            </NavLink>
           </li>
           <li>
-            <Link to="/skills">Skills</Link>
+            <NavLink to="/skills" activeClassName="active">
+              Skills
+            </NavLink>
           </li>
           <li>
-            <Link to="/work">Work</Link>
+            <NavLink to="/work" activeClassName="active">
+              Work
+            </NavLink>
           </li>
           <li>
-            <Link to="/resume">Resume</Link>
+            <NavLink to="/resume" activeClassName="active">
+              Resume
+            </NavLink>
           </li>
           ) : null}
         </nav>
