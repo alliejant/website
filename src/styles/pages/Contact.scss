@@ -1,0 +1,58 @@
+.Contact {
+    display: flex;
+    flex-direction: column;
+    ul {
+        margin-top: 5vmin;
+    }
+    ul, form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    button {
+        padding: 1.5vmin;
+        border-radius: 10px;
+        background-image: linear-gradient(to top right, #fcb69f 0%, #ffecd2 100%,)
+    }
+    button:hover {
+        opacity: 0.75;
+    }
+    button, input, textarea {
+        margin: 1vmin;
+    }
+    input, textarea {
+        width: 60vw;
+        border-radius: 5px;
+        min-width: 50px;
+    }
+    textarea {
+        height: 30vh;
+        min-height: 100px;
+    }
+    input[type="submit"]{
+        width: 10em;
+        padding: .5vmin;
+        background-color:#9597a2;
+    }
+    input, label {
+        align-self: flex-start
+    }
+    label {
+        margin: .5em;
+        margin-bottom: 0px;
+        font-weight: bolder;
+    }
+    .feedback {
+       color: darkblue;
+       font-weight: bold; 
+    }
+}
+
+@media screen and (min-width: 760px){
+    .Contact{
+        flex-direction: row;
+    }
+    ul {
+        align-items: flex-end;
+    }
+}
