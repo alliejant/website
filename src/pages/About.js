@@ -8,13 +8,13 @@ class About extends Component {
       <div className="About">
         <p> How many people do you think would choose D? </p>
         <img
-          src={require("../images/javascript-joke.jpg")}
+          src={require("../media/javascript-joke.jpg")}
           alt="What is the world's most popular language? A: French, B: English, C: Spanish, D: Javascript"
         />
         <p>
           I'd be tempted, but okay, enough with the joking{" "}
           <img
-            src={require("../images/facepalm.png")}
+            src={require("../media/facepalm.png")}
             alt="facepalm"
             title="facepalm"
           />

@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div className="app">
         <img
-          src={require("./images/headshot.jpg")}
+          src={require("./media/headshot.jpg")}
           alt="headshot"
           className="circle"
         />
@@ -79,7 +79,6 @@ class App extends Component {
               Resume
             </NavLink>
           </li>
-          ) : null}
         </nav>
         <main>
           <Switch>
