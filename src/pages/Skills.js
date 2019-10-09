@@ -36,7 +36,8 @@ class Skills extends Component {
       indiciesToUncover: new Set(),
       firstIndex: null,
       secondIndex: null,
-      moves: null
+      moves: null,
+      winner: true
     };
   }
 
@@ -68,6 +69,7 @@ class Skills extends Component {
       this.setState({
         gameOption: "Text - No Game",
         skills: [],
+        winner: false,
         moves: null
       });
       return;
@@ -103,7 +105,8 @@ class Skills extends Component {
       indiciesToUncover,
       firstIndex: null,
       secondIndex: null,
-      moves: 0
+      moves: 0,
+      winner: false
     });
   };
 
@@ -159,17 +162,26 @@ class Skills extends Component {
       this.setState({ indiciesToUncover, firstIndex: i, moves });
     } else if (secondIndex === null) {
       this.setState({ indiciesToUncover, secondIndex: i, moves });
-      setTimeout(this.checkCards, 1000);
+      setTimeout(this.checkCards, 700);
     }
   };
 
   checkCards = () => {
     let { skills, indiciesToUncover, firstIndex, secondIndex } = this.state;
     if (skills[firstIndex] === skills[secondIndex]) {
-      this.setState({
-        firstIndex: null,
-        secondIndex: null
-      });
+      //check if won
+      if (indiciesToUncover.size === 0) {
+        this.setState({
+          firstIndex: null,
+          secondIndex: null,
+          winner: true
+        });
+      } else {
+        this.setState({
+          firstIndex: null,
+          secondIndex: null
+        });
+      }
     } else {
       indiciesToUncover.add(firstIndex);
       indiciesToUncover.add(secondIndex);
@@ -226,7 +238,12 @@ class Skills extends Component {
             </section>
           </div>
         ) : null}
-        {this.state.moves !== null ? <p> Moves: {this.state.moves}</p> : null}
+        {this.state.winner ? (
+          <p className="winner">{this.state.moves} moves! Congrats!!!</p>
+        ) : null}
+        {this.state.winner === false && this.state.moves !== null ? (
+          <p> Moves: {this.state.moves}</p>
+        ) : null}
         <section className="game">{skills}</section>
       </div>
     );

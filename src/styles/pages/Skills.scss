@@ -22,6 +22,42 @@
     background-color: rgba(222, 220, 220,.5);
 }
 
+.winner {
+    animation: winning-jiggle 2s ease-in;
+    color: darkblue;
+}
+
+@keyframes winning-jiggle {
+    40% {
+        transform: scale(1.8, 1.4) rotate(-0.5deg);
+    }
+
+    50% {
+        transform: scale(2, 1.5);
+        color: darkblue;
+    }
+
+    60% {
+        transform: scale(1.8, 1.4) rotate(-1deg);
+    }
+
+    70% {
+        transform: scale(1.6, 1.3) rotate(0deg);
+    } 
+
+    80% {
+        transform: scale(1.4, 1.2) rotate(0.75deg);
+    }
+
+    90% {
+        transform: scale(1.2, 1.1) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
 .game {
     display: flex;
     flex-direction: column;
