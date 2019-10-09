@@ -20,7 +20,7 @@ class Contact extends Component {
     let message = "";
     switch (type) {
       case "job":
-        message = `Hi Allie,\n\nI have a job you might be interested in! We are working on _____.\n\nBest,\n`;
+        message = `Hi Allie,\n\nI have an opportunity I think you'd be interested in! We are working on _____.\n\nBest,\n`;
         break;
       case "study":
         message = `Hi Allie,\n\nI'm studying _____ and would love to meet up to study/build apps together. What I'm thinking is we can _____. Let me know if you are interested!\n\nBest,\n`;
@@ -72,12 +72,12 @@ class Contact extends Component {
         <ul>
           <IconButton
             icon="fas fa-user-tie icon-2x"
-            text="I have work for you"
+            text="New opportunity"
             action={() => this.handleButtonClick("job")}
           />
           <IconButton
             icon="fas fa-user-friends"
-            text="I want to study together"
+            text="Study buddy"
             action={() => this.handleButtonClick("study")}
           />
           <IconButton
@@ -88,7 +88,7 @@ class Contact extends Component {
         </ul>
         <form onSubmit={this.handleSubmit} className="Contact">
           <p className="feedback">{feedback}</p>
-          <label>Contact Info:</label>
+          <label>Contact:</label>
           <input
             type="text"
             name="contactInfo"

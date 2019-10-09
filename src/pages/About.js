@@ -37,10 +37,10 @@ class About extends Component {
           to the lovely San Francisco Bay Area.
         </p>
         <p>
-          I’d love to connect with others who are building a mobile application
-          or want to talk code together! I am currently looking for a new
-          position, so please take a look at what <Link to="/work"> work</Link>{" "}
-          I am looking for.
+          I’d love to connect with others who are building a cool application or
+          want to talk code together! I am currently looking for a new position,
+          so please take a look at what <Link to="/work"> work</Link> I am
+          looking for.
         </p>
       </div>
     );
