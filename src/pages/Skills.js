@@ -10,24 +10,22 @@ class Skills extends Component {
     this.mostRecent = [
       "HTML5",
       "CSS3",
-      "Sass",
       "Javascript",
       "React",
       "React Native",
-      "Ruby",
-      "Rails",
-      "PostgreSQL"
+      "Git"
     ];
     this.somewhatRecent = [
       "GraphQL",
       "Relay",
       "Flow",
-      "Redux",
       "Go",
+      "PostgreSQL",
       "NodeJS",
-      "Express"
+      "Express",
+      "Sass"
     ];
-    this.leastRecent = ["Python", "Flask", "MongoDB"];
+    this.leastRecent = ["Ruby", "Rails", "Python", "Flask", "MongoDB", "Redux"];
 
     this.state = {
       // options include: Text - No Game, Most Recent, Somewhat Recent, Least Recent

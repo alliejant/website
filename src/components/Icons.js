@@ -3,6 +3,7 @@ import express from "@iconify/icons-logos/express";
 import flask from "@iconify/icons-logos/flask";
 import flow from "@iconify/icons-logos/flow";
 import freebie from "@iconify/icons-logos/awesome";
+import git from "@iconify/icons-logos/git";
 import go from "@iconify/icons-logos/gopher";
 import graphql from "@iconify/icons-logos/graphql";
 import html5 from "@iconify/icons-logos/html-5";
@@ -25,6 +26,7 @@ export default {
   flask,
   flow,
   freebie,
+  git,
   go,
   graphql,
   html5,
